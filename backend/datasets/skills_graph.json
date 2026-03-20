@@ -1,0 +1,952 @@
+{
+  "version": "1.0",
+  "source": "SkillMap Knowledge Graph (roadmap.sh + Wikidata + ESCO normalized)",
+  "skills": {
+    "html_basics": {
+      "id": "html_basics",
+      "title": "HTML Basics",
+      "category": "tech",
+      "description": "Foundational web structure. Covers elements, attributes, headings, paragraphs, and links.",
+      "prerequisites": [],
+      "resources": [
+        {"title": "HTML Beginner Tutorial (Mosh)", "url": "https://www.youtube.com/watch?v=qz0aGYrrlhU", "type": "video"},
+        {"title": "HTML Full Course — freeCodeCamp", "url": "https://www.youtube.com/watch?v=pQN-pnXPaVg", "type": "video"}
+      ],
+      "career_tags": ["web_dev"]
+    },
+    "html": {
+      "id": "html",
+      "title": "Advanced HTML",
+      "category": "tech",
+      "description": "Modern web structuring. Covers semantic HTML5, forms, validations, media elements, and core accessibility (ARIA).",
+      "prerequisites": ["html_basics"],
+      "resources": [
+        {"title": "Semantic HTML Tutorial", "url": "https://www.youtube.com/watch?v=kGX8irPrNwQ", "type": "video"},
+        {"title": "HTML Form Styling", "url": "https://www.youtube.com/watch?v=Yf5E7E_Y01c", "type": "video"}
+      ],
+      "career_tags": ["web_dev", "frontend", "full_stack"]
+    },
+    "css": {
+      "id": "css",
+      "title": "CSS",
+      "category": "tech",
+      "description": "Cascading Style Sheets — controls the presentation of HTML. Covers selectors, box model, flexbox, grid, animations, and responsive design.",
+      "prerequisites": ["html"],
+      "resources": [
+        {"title": "CSS Full Course — freeCodeCamp", "url": "https://www.youtube.com/watch?v=OXGznpKZ_sA", "type": "video"},
+        {"title": "CSS Crash Course (Traversy)", "url": "https://www.youtube.com/watch?v=yfoY53QXEnI", "type": "video"}
+      ],
+      "career_tags": ["web_dev", "frontend", "ui_ux"]
+    },
+    "javascript": {
+      "id": "javascript",
+      "title": "JavaScript",
+      "category": "tech",
+      "description": "The scripting language of the web. Covers variables, functions, DOM manipulation, async/await, ES6+, and browser APIs.",
+      "prerequisites": ["html", "css"],
+      "resources": [
+        {"title": "JavaScript Tutorial (Mosh)", "url": "https://www.youtube.com/watch?v=W6NZfCO5SIk", "type": "video"},
+        {"title": "JS Full Course — freeCodeCamp", "url": "https://www.youtube.com/watch?v=PkZNo7MFNFg", "type": "video"}
+      ],
+      "career_tags": ["web_dev", "frontend", "full_stack", "backend"]
+    },
+    "git_basics": {
+      "id": "git_basics",
+      "title": "Git Basics",
+      "category": "tech",
+      "description": "Foundational version control. Covers init, add, commit, log, and status.",
+      "prerequisites": [],
+      "resources": [
+        {"title": "Git for Beginners — Traversy", "url": "https://www.youtube.com/watch?v=v_O6SnoXo7s", "type": "video"},
+        {"title": "Git Full Course — freeCodeCamp", "url": "https://www.youtube.com/watch?v=RGOj5yH7evk", "type": "video"}
+      ],
+      "career_tags": ["software_engineering"]
+    },
+    "git": {
+      "id": "git",
+      "title": "Git Workflow",
+      "category": "tech",
+      "description": "Advanced version control and collaboration. Covers branching, merging, rebasing, pull requests, and resolving conflicts.",
+      "prerequisites": ["git_basics"],
+      "resources": [
+        {"title": "Git Advanced Workflow", "url": "https://www.youtube.com/watch?v=Uszj_k0DGsg", "type": "video"},
+        {"title": "Git Rebase Explained", "url": "https://www.youtube.com/watch?v=f1wnYdLEOt0", "type": "video"}
+      ],
+      "career_tags": ["web_dev", "software_engineering", "devops"]
+    },
+    "terminal_basics": {
+      "id": "terminal_basics",
+      "title": "Terminal Basics",
+      "category": "tech",
+      "description": "Basic command-line proficiency. Covers navigation (cd, ls), file operations (cp, mv, rm), and manual pages.",
+      "prerequisites": [],
+      "resources": [
+        {"title": "Learn Enough Command Line", "url": "https://www.learnenough.com/command-line-tutorial", "type": "tutorial"}
+      ],
+      "career_tags": ["software_engineering"]
+    },
+    "terminal": {
+      "id": "terminal",
+      "title": "Shell Scripting & CLI",
+      "category": "tech",
+      "description": "Advanced CLI proficiency. Covers shell scripting, process management, pipes, grep, and environment variables.",
+      "prerequisites": ["terminal_basics"],
+      "resources": [
+        {"title": "The Missing Semester", "url": "https://missing.csail.mit.edu", "type": "course"},
+        {"title": "Bash Manual", "url": "https://www.gnu.org/software/bash/manual/", "type": "docs"}
+      ],
+      "career_tags": ["software_engineering", "devops", "linux"]
+    },
+    "linux": {
+      "id": "linux",
+      "title": "Linux",
+      "category": "tech",
+      "description": "Linux operating system fundamentals. Covers filesystem, permissions, process management, networking tools, cron jobs, and system administration.",
+      "prerequisites": ["terminal_basics"],
+      "resources": [
+        {"title": "Linux Journey", "url": "https://linuxjourney.com", "type": "tutorial"},
+        {"title": "The Linux Command Line", "url": "https://linuxcommand.org/tlcl.php", "type": "book"},
+        {"title": "Arch Wiki", "url": "https://wiki.archlinux.org", "type": "reference"}
+      ],
+      "career_tags": ["devops", "software_engineering", "networking"]
+    },
+    "networking": {
+      "id": "networking",
+      "title": "Networking",
+      "category": "tech",
+      "description": "Computer networking concepts. Covers TCP/IP, DNS, HTTP/HTTPS, OSI model, firewalls, load balancers, and network security.",
+      "prerequisites": ["linux"],
+      "resources": [
+        {"title": "Computer Networks — Tanenbaum", "url": "https://www.pearson.com/en-us/subject-catalog/p/computer-networks/P200000003273", "type": "book"},
+        {"title": "NetworkChuck YouTube", "url": "https://www.youtube.com/c/NetworkChuck", "type": "video"},
+        {"title": "Cloudflare Learning", "url": "https://www.cloudflare.com/learning/", "type": "docs"}
+      ],
+      "career_tags": ["devops", "cloud", "security"]
+    },
+    "python_basics": {
+      "id": "python_basics",
+      "title": "Python Basics",
+      "category": "tech",
+      "description": "Foundational Python syntax. Covers variables, data types (strings, lists, dicts), control flow (if/else, for/while), and functions.",
+      "prerequisites": [],
+      "resources": [
+        {"title": "Python for Beginners (Mosh)", "url": "https://www.youtube.com/watch?v=_uQrJ0TkZlc", "type": "video"},
+        {"title": "Learn Python — freeCodeCamp", "url": "https://www.youtube.com/watch?v=rfscVS0vtbw", "type": "video"}
+      ],
+      "career_tags": ["all"]
+    },
+    "python_oop": {
+      "id": "python_oop",
+      "title": "OOP in Python",
+      "category": "tech",
+      "description": "Object-Oriented Programming in Python. Covers classes, objects, inheritance, methods, and dunder methods.",
+      "prerequisites": ["python_basics"],
+      "resources": [
+        {"title": "Python OOP Tutorial (Corey Schafer)", "url": "https://www.youtube.com/watch?v=ZDa-Z5JzLYM", "type": "video"},
+        {"title": "Python Classes and Objects", "url": "https://www.youtube.com/watch?v=Tm5u97I7OrM", "type": "video"}
+      ],
+      "career_tags": ["software_engineering", "backend"]
+    },
+    "python_advanced": {
+      "id": "python_advanced",
+      "title": "Advanced Python",
+      "category": "tech",
+      "description": "Intermediate to advanced Python concepts. Covers decorators, generators, context managers, threading/multiprocessing, and virtual environments.",
+      "prerequisites": ["python_oop"],
+      "resources": [
+        {"title": "Advanced Python (Corey Schafer)", "url": "https://www.youtube.com/watch?v=Cswm4h7SAtw", "type": "video"},
+        {"title": "Python Decorators Explained", "url": "https://www.youtube.com/watch?v=FsAPt_9Bf3U", "type": "video"}
+      ],
+      "career_tags": ["software_engineering", "backend", "ml"]
+    },
+    "python": {
+      "id": "python",
+      "title": "Python Mastery",
+      "category": "tech",
+      "description": "Comprehensive proficiency in Python. Ready for technical interviews and professional development.",
+      "prerequisites": ["python_advanced"],
+      "resources": [
+        {"title": "Python Docs", "url": "https://docs.python.org/3/", "type": "docs"},
+        {"title": "Automate the Boring Stuff", "url": "https://automatetheboringstuff.com", "type": "book"},
+        {"title": "Real Python", "url": "https://realpython.com", "type": "tutorial"}
+      ],
+      "career_tags": ["data_science", "backend", "ml", "software_engineering"]
+    },
+    "sql_basics": {
+      "id": "sql_basics",
+      "title": "SQL Basics",
+      "category": "tech",
+      "description": "Foundational database queries. Covers SELECT, WHERE, INSERT, UPDATE, and DELETE.",
+      "prerequisites": [],
+      "resources": [
+        {"title": "SQL Beginner Tutorial (Mosh)", "url": "https://www.youtube.com/watch?v=7S_tz1z_5bA", "type": "video"},
+        {"title": "SQL Full Course — freeCodeCamp", "url": "https://www.youtube.com/watch?v=HXV3zeQKqGY", "type": "video"}
+      ],
+      "career_tags": ["data_science", "backend"]
+    },
+    "sql": {
+      "id": "sql",
+      "title": "Advanced SQL",
+      "category": "tech",
+      "description": "Complex database operations. Covers JOINs, aggregations, subqueries, transactions, and performance optimization.",
+      "prerequisites": ["sql_basics"],
+      "resources": [
+        {"title": "SQLZoo", "url": "https://sqlzoo.net", "type": "tutorial"},
+        {"title": "Mode Analytics SQL Tutorial", "url": "https://mode.com/sql-tutorial/", "type": "tutorial"},
+        {"title": "PostgreSQL Docs", "url": "https://www.postgresql.org/docs/", "type": "docs"}
+      ],
+      "career_tags": ["data_science", "backend", "data_engineering", "business_analysis"]
+    },
+    "frontend": {
+      "id": "frontend",
+      "title": "Frontend Development",
+      "category": "tech",
+      "description": "Building user-facing web interfaces. Covers modern frameworks (React/Vue/Angular), state management, build tools, performance optimization, and accessibility.",
+      "prerequisites": ["html", "css", "javascript", "git"],
+      "resources": [
+        {"title": "Frontend Roadmap", "url": "https://roadmap.sh/frontend", "type": "roadmap"},
+        {"title": "web.dev", "url": "https://web.dev", "type": "docs"},
+        {"title": "Frontend Masters", "url": "https://frontendmasters.com", "type": "course"}
+      ],
+      "career_tags": ["web_dev", "full_stack"]
+    },
+    "react": {
+      "id": "react",
+      "title": "React",
+      "category": "tech",
+      "description": "A JavaScript library for building component-based UIs. Covers JSX, hooks, context, routing, state management, and ecosystem tools.",
+      "prerequisites": ["javascript", "html", "css", "git"],
+      "resources": [
+        {"title": "React JS Crash Course (Traversy)", "url": "https://www.youtube.com/watch?v=w7ejDZ8SWv8", "type": "video"},
+        {"title": "React Tutorial for Beginners", "url": "https://www.youtube.com/watch?v=bMknfKXIFA8", "type": "video"}
+      ],
+      "career_tags": ["frontend", "full_stack"]
+    },
+    "backend": {
+      "id": "backend",
+      "title": "Backend Development",
+      "category": "tech",
+      "description": "Server-side web development. Covers REST APIs, authentication, databases, caching, message queues, and server management.",
+      "prerequisites": ["python_advanced", "sql", "git", "terminal_basics"],
+      "resources": [
+        {"title": "Backend Roadmap", "url": "https://roadmap.sh/backend", "type": "roadmap"},
+        {"title": "FastAPI Docs", "url": "https://fastapi.tiangolo.com", "type": "docs"}
+      ],
+      "career_tags": ["web_dev", "software_engineering", "full_stack"]
+    },
+    "api_dev": {
+      "id": "api_dev",
+      "title": "API Development",
+      "category": "tech",
+      "description": "Designing and building APIs. Covers REST, GraphQL, OpenAPI spec, versioning, authentication (JWT/OAuth), rate limiting, and documentation.",
+      "prerequisites": ["backend", "http_basics"],
+      "resources": [
+        {"title": "REST API Tutorial", "url": "https://restfulapi.net", "type": "tutorial"},
+        {"title": "OpenAPI Specification", "url": "https://swagger.io/specification/", "type": "docs"},
+        {"title": "Postman Learning", "url": "https://learning.postman.com", "type": "docs"}
+      ],
+      "career_tags": ["backend", "full_stack", "software_engineering"]
+    },
+    "http_basics": {
+      "id": "http_basics",
+      "title": "HTTP & Web Protocols",
+      "category": "tech",
+      "description": "Foundation of web communication. Covers HTTP methods, status codes, headers, cookies, HTTPS/TLS, HTTP/2, WebSockets, and REST principles.",
+      "prerequisites": ["networking"],
+      "resources": [
+        {"title": "MDN HTTP Docs", "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP", "type": "docs"},
+        {"title": "HTTP: The Definitive Guide", "url": "https://www.oreilly.com/library/view/http-the-definitive/1565925092/", "type": "book"}
+      ],
+      "career_tags": ["backend", "web_dev", "devops"]
+    },
+    "full_stack": {
+      "id": "full_stack",
+      "title": "Full Stack Development",
+      "category": "tech",
+      "description": "End-to-end web application development combining frontend and backend. Covers deployment, databases, API integration, authentication, and DevOps basics.",
+      "prerequisites": ["frontend", "backend", "sql"],
+      "resources": [
+        {"title": "Full Stack Open", "url": "https://fullstackopen.com", "type": "course"},
+        {"title": "The Odin Project", "url": "https://www.theodinproject.com", "type": "course"}
+      ],
+      "career_tags": ["web_dev", "software_engineering"]
+    },
+    "web_dev": {
+      "id": "web_dev",
+      "title": "Web Development",
+      "category": "tech",
+      "description": "Comprehensive web development covering both frontend and backend. Includes modern tooling, frameworks, deployment, security, and performance.",
+      "prerequisites": ["full_stack"],
+      "resources": [
+        {"title": "MDN Web Docs", "url": "https://developer.mozilla.org", "type": "docs"},
+        {"title": "Roadmap.sh Web Dev", "url": "https://roadmap.sh/full-stack", "type": "roadmap"}
+      ],
+      "career_tags": ["software_engineering"]
+    },
+    "software_engineering": {
+      "id": "software_engineering",
+      "title": "Software Engineering",
+      "category": "tech",
+      "description": "Principles of professional software development. Covers SOLID principles, design patterns, testing, code review, documentation, and software lifecycle.",
+      "prerequisites": ["git", "python_basics", "dsa"],
+      "resources": [
+        {"title": "Clean Code — Robert Martin", "url": "https://www.oreilly.com/library/view/clean-code-a/9780136083238/", "type": "book"},
+        {"title": "The Pragmatic Programmer", "url": "https://pragprog.com/titles/tpp20/the-pragmatic-programmer-20th-anniversary-edition/", "type": "book"}
+      ],
+      "career_tags": ["all"]
+    },
+    "statistics": {
+      "id": "statistics",
+      "title": "Statistics",
+      "category": "science",
+      "description": "Mathematical analysis of data. Covers probability, distributions, hypothesis testing, regression, Bayesian inference, and statistical computing.",
+      "prerequisites": ["mathematics"],
+      "resources": [
+        {"title": "StatQuest YouTube", "url": "https://www.youtube.com/c/joshstarmer", "type": "video"},
+        {"title": "OpenIntro Statistics", "url": "https://www.openintro.org/book/os/", "type": "book"},
+        {"title": "Think Stats", "url": "https://greenteapress.com/thinkstats2/", "type": "book"}
+      ],
+      "career_tags": ["data_science", "ml", "data_analytics"]
+    },
+    "arithmetic_algebra": {
+      "id": "arithmetic_algebra",
+      "title": "Arithmetic & Algebra",
+      "category": "science",
+      "description": "Fundamental mathematics. Covers basic operations, equations, variables, functions, and coordinate geometry.",
+      "prerequisites": [],
+      "resources": [
+        {"title": "Khan Academy Algebra", "url": "https://www.khanacademy.org/math/algebra", "type": "course"}
+      ],
+      "career_tags": ["all"]
+    },
+    "mathematics": {
+      "id": "mathematics",
+      "title": "Foundational Mathematics",
+      "category": "science",
+      "description": "Advanced foundational math. Covers set theory, logic, discrete math, and base-level calculus principles.",
+      "prerequisites": ["arithmetic_algebra"],
+      "resources": [
+        {"title": "Khan Academy Math", "url": "https://www.khanacademy.org/math", "type": "course"},
+        {"title": "3Blue1Brown", "url": "https://www.youtube.com/c/3blue1brown", "type": "video"},
+        {"title": "Concrete Mathematics — Knuth", "url": "https://www.pearson.com/en-us/subject-catalog/p/concrete-mathematics-a-foundation-for-computer-science/P200000003193", "type": "book"}
+      ],
+      "career_tags": ["data_science", "ml", "cs_fundamentals"]
+    },
+    "linear_algebra": {
+      "id": "linear_algebra",
+      "title": "Linear Algebra",
+      "category": "science",
+      "description": "Study of vectors, matrices, and linear transformations. Covers dot products, matrix operations, eigenvalues, SVD, and applications in ML.",
+      "prerequisites": ["mathematics"],
+      "resources": [
+        {"title": "3B1B Linear Algebra Series", "url": "https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab", "type": "video"},
+        {"title": "Linear Algebra — Gilbert Strang", "url": "https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/", "type": "course"},
+        {"title": "Immersive Linear Algebra", "url": "http://immersivemath.com/ila/", "type": "book"}
+      ],
+      "career_tags": ["ml", "data_science"]
+    },
+    "physics": {
+      "id": "physics",
+      "title": "Physics",
+      "category": "science",
+      "description": "Classical and modern physics fundamentals. Covers mechanics, thermodynamics, electromagnetism, waves, and quantum mechanics basics.",
+      "prerequisites": ["mathematics"],
+      "resources": [
+        {"title": "Khan Academy Physics", "url": "https://www.khanacademy.org/science/physics", "type": "course"},
+        {"title": "The Feynman Lectures", "url": "https://www.feynmanlectures.caltech.edu", "type": "book"}
+      ],
+      "career_tags": ["engineering"]
+    },
+    "cs_fundamentals": {
+      "id": "cs_fundamentals",
+      "title": "CS Fundamentals",
+      "category": "science",
+      "description": "Core computer science concepts. Covers computation theory, automata, compilers, operating systems, computer architecture, and memory management.",
+      "prerequisites": ["mathematics", "python_basics"],
+      "resources": [
+        {"title": "CS50 by Harvard", "url": "https://cs50.harvard.edu", "type": "course"},
+        {"title": "OSSU Computer Science", "url": "https://github.com/ossu/computer-science", "type": "roadmap"},
+        {"title": "NAND2Tetris", "url": "https://www.nand2tetris.org", "type": "course"}
+      ],
+      "career_tags": ["software_engineering", "ml"]
+    },
+    "dsa": {
+      "id": "dsa",
+      "title": "Data Structures & Algorithms",
+      "category": "science",
+      "description": "Fundamental data structures and algorithmic thinking. Covers arrays, linked lists, trees, graphs, sorting, searching, dynamic programming, and complexity analysis.",
+      "prerequisites": ["mathematics", "python_basics"],
+      "resources": [
+        {"title": "LeetCode", "url": "https://leetcode.com", "type": "practice"},
+        {"title": "Algorithms — CLRS", "url": "https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/", "type": "book"},
+        {"title": "Visualgo", "url": "https://visualgo.net", "type": "tool"}
+      ],
+      "career_tags": ["software_engineering", "ml"]
+    },
+    "data_science": {
+      "id": "data_science",
+      "title": "Data Science",
+      "category": "tech",
+      "description": "Extracting insights from data. Covers data collection, cleaning, EDA, visualization, statistical modeling, and communicating results.",
+      "prerequisites": ["python_advanced", "statistics", "sql", "linear_algebra"],
+      "resources": [
+        {"title": "Data Science Roadmap", "url": "https://roadmap.sh/data-science", "type": "roadmap"},
+        {"title": "Kaggle Learn", "url": "https://www.kaggle.com/learn", "type": "course"},
+        {"title": "Python Data Science Handbook", "url": "https://jakevdp.github.io/PythonDataScienceHandbook/", "type": "book"}
+      ],
+      "career_tags": ["ml", "data_analytics", "data_engineering"]
+    },
+    "machine_learning": {
+      "id": "machine_learning",
+      "title": "Machine Learning",
+      "category": "tech",
+      "description": "Building systems that learn from data. Covers supervised/unsupervised learning, neural networks, model evaluation, feature engineering, and deployment.",
+      "prerequisites": ["data_science", "linear_algebra", "statistics", "python_advanced"],
+      "resources": [
+        {"title": "fast.ai", "url": "https://www.fast.ai", "type": "course"},
+        {"title": "Hands-On ML — Géron", "url": "https://www.oreilly.com/library/view/hands-on-machine-learning/9781492032632/", "type": "book"},
+        {"title": "ML Roadmap", "url": "https://roadmap.sh/mlops", "type": "roadmap"}
+      ],
+      "career_tags": ["ai", "data_science"]
+    },
+    "ai": {
+      "id": "ai",
+      "title": "Artificial Intelligence",
+      "category": "tech",
+      "description": "Advanced AI concepts including deep learning, NLP, computer vision, reinforcement learning, LLMs, and responsible AI development.",
+      "prerequisites": ["machine_learning", "linear_algebra", "cs_fundamentals"],
+      "resources": [
+        {"title": "Deep Learning Book", "url": "https://www.deeplearningbook.org", "type": "book"},
+        {"title": "CS231n Stanford", "url": "http://cs231n.stanford.edu", "type": "course"},
+        {"title": "Hugging Face", "url": "https://huggingface.co/learn", "type": "docs"}
+      ],
+      "career_tags": ["ml", "research"]
+    },
+    "data_engineering": {
+      "id": "data_engineering",
+      "title": "Data Engineering",
+      "category": "tech",
+      "description": "Building data infrastructure. Covers ETL pipelines, data warehouses, streaming (Kafka), Spark, Airflow, data modeling, and cloud data services.",
+      "prerequisites": ["sql", "python_basics", "linux", "networking"],
+      "resources": [
+        {"title": "Data Engineering Zoomcamp", "url": "https://github.com/DataTalksClub/data-engineering-zoomcamp", "type": "course"},
+        {"title": "Fundamentals of DE — Reis", "url": "https://www.oreilly.com/library/view/fundamentals-of-data/9781098108298/", "type": "book"}
+      ],
+      "career_tags": ["data_science", "backend"]
+    },
+    "system_design": {
+      "id": "system_design",
+      "title": "System Design",
+      "category": "tech",
+      "description": "Designing scalable distributed systems. Covers CAP theorem, sharding, caching, load balancing, microservices, event-driven architecture, and real-world case studies.",
+      "prerequisites": ["backend", "networking", "sql", "dsa"],
+      "resources": [
+        {"title": "System Design Primer", "url": "https://github.com/donnemartin/system-design-primer", "type": "reference"},
+        {"title": "Designing Data-Intensive Apps — Kleppmann", "url": "https://dataintensive.net", "type": "book"},
+        {"title": "ByteByteGo", "url": "https://bytebytego.com", "type": "course"}
+      ],
+      "career_tags": ["software_engineering", "backend", "devops"]
+    },
+    "cloud": {
+      "id": "cloud",
+      "title": "Cloud Computing",
+      "category": "tech",
+      "description": "Cloud platforms and services. Covers AWS/GCP/Azure fundamentals, compute, storage, networking, IAM, serverless, and cost optimization.",
+      "prerequisites": ["linux", "networking", "backend"],
+      "resources": [
+        {"title": "AWS Free Tier", "url": "https://aws.amazon.com/free/", "type": "tool"},
+        {"title": "Cloud Roadmap", "url": "https://roadmap.sh/aws", "type": "roadmap"},
+        {"title": "A Cloud Guru", "url": "https://acloudguru.com", "type": "course"}
+      ],
+      "career_tags": ["devops", "software_engineering"]
+    },
+    "devops": {
+      "id": "devops",
+      "title": "DevOps",
+      "category": "tech",
+      "description": "Culture and practices bridging development and operations. Covers CI/CD pipelines, infrastructure as code, monitoring, incident response, and SRE principles.",
+      "prerequisites": ["linux", "cloud", "git", "networking"],
+      "resources": [
+        {"title": "DevOps Roadmap", "url": "https://roadmap.sh/devops", "type": "roadmap"},
+        {"title": "The DevOps Handbook", "url": "https://itrevolution.com/product/the-devops-handbook-second-edition/", "type": "book"}
+      ],
+      "career_tags": ["cloud", "software_engineering"]
+    },
+    "docker": {
+      "id": "docker",
+      "title": "Docker",
+      "category": "tech",
+      "description": "Container technology for packaging applications. Covers Dockerfiles, images, containers, volumes, networks, Docker Compose, and container registries.",
+      "prerequisites": ["linux", "backend"],
+      "resources": [
+        {"title": "Docker Tutorial for Beginners (Nana)", "url": "https://www.youtube.com/watch?v=3c-iBn7E97w", "type": "video"},
+        {"title": "Docker Full Course (Mosh)", "url": "https://www.youtube.com/watch?v=pTFZFxd47L0", "type": "video"}
+      ],
+      "career_tags": ["devops", "backend"]
+    },
+    "kubernetes": {
+      "id": "kubernetes",
+      "title": "Kubernetes",
+      "category": "tech",
+      "description": "Container orchestration platform. Covers pods, deployments, services, ingress, scaling, Helm charts, RBAC, and cluster management.",
+      "prerequisites": ["docker", "cloud", "networking"],
+      "resources": [
+        {"title": "Kubernetes Tutorial for Beginners (Nana)", "url": "https://www.youtube.com/watch?v=X48VuDVv0do", "type": "video"},
+        {"title": "K8s Full Course — freeCodeCamp", "url": "https://www.youtube.com/watch?v=d6WC5n9G_sM", "type": "video"}
+      ],
+      "career_tags": ["devops", "cloud"]
+    },
+    "product_management": {
+      "id": "product_management",
+      "title": "Product Management",
+      "category": "business",
+      "description": "Leading product development from ideation to launch. Covers product strategy, roadmapping, user research, prioritization, OKRs, and cross-functional collaboration.",
+      "prerequisites": ["critical_thinking", "communication", "data_analytics"],
+      "resources": [
+        {"title": "Inspired — Marty Cagan", "url": "https://www.svpg.com/books/inspired-how-to-create-tech-products-customers-love-2nd-edition/", "type": "book"},
+        {"title": "Lenny's Newsletter", "url": "https://www.lennysnewsletter.com", "type": "reference"},
+        {"title": "Product School", "url": "https://productschool.com", "type": "course"}
+      ],
+      "career_tags": ["business", "tech"]
+    },
+    "project_management": {
+      "id": "project_management",
+      "title": "Project Management",
+      "category": "business",
+      "description": "Planning and executing projects successfully. Covers Agile, Scrum, Kanban, risk management, stakeholder communication, and PMP/PRINCE2 frameworks.",
+      "prerequisites": ["communication", "leadership"],
+      "resources": [
+        {"title": "PMI PMBOK Guide", "url": "https://www.pmi.org/pmbok-guide-standards", "type": "book"},
+        {"title": "Scrum Guide", "url": "https://scrumguides.org", "type": "docs"},
+        {"title": "Atlassian Agile", "url": "https://www.atlassian.com/agile", "type": "reference"}
+      ],
+      "career_tags": ["business", "tech"]
+    },
+    "data_analytics": {
+      "id": "data_analytics",
+      "title": "Data Analytics",
+      "category": "business",
+      "description": "Analyzing business data for decision-making. Covers Excel, SQL, Tableau/Power BI, A/B testing, KPIs, and data storytelling.",
+      "prerequisites": ["sql", "statistics", "critical_thinking"],
+      "resources": [
+        {"title": "Google Data Analytics Certificate", "url": "https://grow.google/intl/en_in/grow-with-google/", "type": "course"},
+        {"title": "Mode Analytics", "url": "https://mode.com/sql-tutorial/", "type": "tutorial"},
+        {"title": "Tableau Public", "url": "https://public.tableau.com", "type": "tool"}
+      ],
+      "career_tags": ["business", "data_science"]
+    },
+    "business_analysis": {
+      "id": "business_analysis",
+      "title": "Business Analysis",
+      "category": "business",
+      "description": "Bridging business needs and technical solutions. Covers requirements gathering, process modeling, stakeholder analysis, BRDs, and change management.",
+      "prerequisites": ["communication", "critical_thinking", "data_analytics"],
+      "resources": [
+        {"title": "BABOK Guide", "url": "https://www.iiba.org/career-resources/a-business-analysis-body-of-knowledge/babok/", "type": "book"},
+        {"title": "Business Analysis Foundations", "url": "https://www.linkedin.com/learning/business-analysis-foundations", "type": "course"}
+      ],
+      "career_tags": ["business", "tech"]
+    },
+    "digital_marketing": {
+      "id": "digital_marketing",
+      "title": "Digital Marketing",
+      "category": "business",
+      "description": "Online marketing strategies and execution. Covers SEO, SEM, social media, email marketing, content marketing, analytics, and paid advertising.",
+      "prerequisites": ["communication", "critical_thinking"],
+      "resources": [
+        {"title": "Google Digital Garage", "url": "https://learndigital.withgoogle.com/digitalgarage", "type": "course"},
+        {"title": "HubSpot Academy", "url": "https://academy.hubspot.com", "type": "course"},
+        {"title": "Neil Patel Blog", "url": "https://neilpatel.com/blog/", "type": "reference"}
+      ],
+      "career_tags": ["marketing", "entrepreneurship"]
+    },
+    "seo": {
+      "id": "seo",
+      "title": "SEO",
+      "category": "business",
+      "description": "Search Engine Optimization for organic visibility. Covers keyword research, on-page/off-page optimization, technical SEO, link building, and analytics.",
+      "prerequisites": ["digital_marketing", "html"],
+      "resources": [
+        {"title": "Moz Beginner's Guide to SEO", "url": "https://moz.com/beginners-guide-to-seo", "type": "guide"},
+        {"title": "Ahrefs Blog", "url": "https://ahrefs.com/blog", "type": "reference"},
+        {"title": "Google Search Console", "url": "https://search.google.com/search-console/about", "type": "tool"}
+      ],
+      "career_tags": ["marketing", "web_dev"]
+    },
+    "finance": {
+      "id": "finance",
+      "title": "Finance",
+      "category": "business",
+      "description": "Financial concepts and analysis. Covers financial statements, valuation, capital structure, cash flow analysis, budgeting, and corporate finance.",
+      "prerequisites": ["mathematics", "critical_thinking"],
+      "resources": [
+        {"title": "Corporate Finance — Berk", "url": "https://www.pearson.com/en-us/subject-catalog/p/corporate-finance/P200000005842", "type": "book"},
+        {"title": "Investopedia", "url": "https://www.investopedia.com", "type": "reference"},
+        {"title": "Khan Academy Finance", "url": "https://www.khanacademy.org/economics-finance-domain", "type": "course"}
+      ],
+      "career_tags": ["business", "investment"]
+    },
+    "investment": {
+      "id": "investment",
+      "title": "Investment",
+      "category": "business",
+      "description": "Principles of investing and portfolio management. Covers asset classes, risk/return, equity analysis, fixed income, portfolio theory, and alternative investments.",
+      "prerequisites": ["finance", "statistics"],
+      "resources": [
+        {"title": "The Intelligent Investor — Graham", "url": "https://www.harpercollins.com/products/the-intelligent-investor-benjamin-graham", "type": "book"},
+        {"title": "CFA Institute Resources", "url": "https://www.cfainstitute.org", "type": "reference"},
+        {"title": "Damodaran Online", "url": "http://pages.stern.nyu.edu/~adamodar/", "type": "reference"}
+      ],
+      "career_tags": ["finance", "business"]
+    },
+    "sales": {
+      "id": "sales",
+      "title": "Sales",
+      "category": "business",
+      "description": "Sales strategy and execution. Covers prospecting, qualification, discovery, objection handling, closing, CRM tools, and sales metrics.",
+      "prerequisites": ["communication", "problem_solving"],
+      "resources": [
+        {"title": "SPIN Selling — Rackham", "url": "https://www.mcgraw-hill.com", "type": "book"},
+        {"title": "HubSpot Sales Blog", "url": "https://blog.hubspot.com/sales", "type": "reference"},
+        {"title": "Salesforce Trailhead", "url": "https://trailhead.salesforce.com", "type": "course"}
+      ],
+      "career_tags": ["business", "entrepreneurship"]
+    },
+    "entrepreneurship": {
+      "id": "entrepreneurship",
+      "title": "Entrepreneurship",
+      "category": "business",
+      "description": "Building and scaling ventures. Covers ideation, validation, business models, fundraising, team building, growth strategies, and startup operations.",
+      "prerequisites": ["finance", "product_management", "leadership", "sales"],
+      "resources": [
+        {"title": "The Lean Startup — Ries", "url": "http://theleanstartup.com", "type": "book"},
+        {"title": "Y Combinator Startup Library", "url": "https://www.ycombinator.com/library", "type": "reference"},
+        {"title": "Paul Graham Essays", "url": "http://paulgraham.com/articles.html", "type": "reference"}
+      ],
+      "career_tags": ["business"]
+    },
+    "ui_ux": {
+      "id": "ui_ux",
+      "title": "UI/UX Design",
+      "category": "creative",
+      "description": "User interface and experience design. Covers design thinking, wireframing, prototyping, usability testing, accessibility, design systems, and Figma.",
+      "prerequisites": ["graphic_design", "critical_thinking"],
+      "resources": [
+        {"title": "UI / UX Design Crash Course (DesignCourse)", "url": "https://www.youtube.com/watch?v=c9Wg6WMLAF4", "type": "video"},
+        {"title": "UX Design Fundamentals", "url": "https://www.youtube.com/watch?v=p1hI6jF4fI0", "type": "video"}
+      ],
+      "career_tags": ["design", "web_dev", "product_management"]
+    },
+    "design_principles": {
+      "id": "design_principles",
+      "title": "Design Principles",
+      "category": "creative",
+      "description": "The building blocks of visual communication: balance, contrast, alignment, hierarchy, and proximity.",
+      "prerequisites": [],
+      "resources": [
+        {"title": "Design Principles Course", "url": "https://www.youtube.com/watch?v=Sg6YStTf_Yc", "type": "video"}
+      ],
+      "career_tags": ["design"]
+    },
+    "typography": {
+      "id": "typography",
+      "title": "Typography Basics",
+      "category": "creative",
+      "description": "The art of arranging type. Covers fonts, kerning, leading, and font classification.",
+      "prerequisites": [],
+      "resources": [
+        {"title": "Typography for Beginners", "url": "https://www.youtube.com/watch?v=kGX8irPrNwQ", "type": "video"}
+      ],
+      "career_tags": ["design"]
+    },
+    "color_theory": {
+      "id": "color_theory",
+      "title": "Color Theory",
+      "category": "creative",
+      "description": "Understanding color wheels, harmonies, and the psychological impact of color in design.",
+      "prerequisites": [],
+      "resources": [
+        {"title": "Color Theory Explained", "url": "https://www.youtube.com/watch?v=FrzWJx4w61U", "type": "video"}
+      ],
+      "career_tags": ["design"]
+    },
+    "graphic_software": {
+      "id": "graphic_software",
+      "title": "Graphic Design Software",
+      "category": "creative",
+      "description": "Proficiency in industry-standard tools: Photoshop (raster), Illustrator (vector), and InDesign (layout).",
+      "prerequisites": ["design_principles", "typography", "color_theory"],
+      "resources": [
+        {"title": "Photoshop & Illustrator Basics", "url": "https://www.youtube.com/watch?v=pQN-pnXPaVg", "type": "video"}
+      ],
+      "career_tags": ["design"]
+    },
+    "graphic_design": {
+      "id": "graphic_design",
+      "title": "Graphic Design Mastery",
+      "category": "creative",
+      "description": "Comprehensive visual communication through design. Ready for professional branding and layout projects.",
+      "prerequisites": ["graphic_software"],
+      "resources": [
+        {"title": "The Futur — Graphic Design", "url": "https://www.youtube.com/c/thefuturishere", "type": "video"},
+        {"title": "Graphic Design Portfolio Tips", "url": "https://www.youtube.com/watch?v=p1hI6jF4fI0", "type": "video"}
+      ],
+      "career_tags": ["design", "marketing"]
+    },
+    "storytelling": {
+      "id": "storytelling",
+      "title": "Video Storytelling",
+      "category": "creative",
+      "description": "The core of video production: narrative structure, pacing, and emotional impact.",
+      "prerequisites": [],
+      "resources": [
+        {"title": "Storytelling for Video", "url": "https://www.youtube.com/watch?v=p1hI6jF4fI0", "type": "video"}
+      ],
+      "career_tags": ["video"]
+    },
+    "timeline_editing": {
+      "id": "timeline_editing",
+      "title": "Timeline & Trimming",
+      "category": "creative",
+      "description": "Basic video cutting, sequence management, and technical timeline proficiency.",
+      "prerequisites": [],
+      "resources": [
+        {"title": "Video Editing Basics (Mosh)", "url": "https://www.youtube.com/watch?v=W6NZfCO5SIk", "type": "video"}
+      ],
+      "career_tags": ["video"]
+    },
+    "video_software": {
+      "id": "video_software",
+      "title": "Video Editing Software",
+      "category": "creative",
+      "description": "Mastering Adobe Premiere Pro or DaVinci Resolve for professional production.",
+      "prerequisites": ["storytelling", "timeline_editing"],
+      "resources": [
+        {"title": "Premiere Pro / DaVinci Course", "url": "https://www.youtube.com/watch?v=bMknfKXIFA8", "type": "video"}
+      ],
+      "career_tags": ["video"]
+    },
+    "video_editing": {
+      "id": "video_editing",
+      "title": "Video Editing Mastery",
+      "category": "creative",
+      "description": "High-level post-production video editing. Covers color grading, audio mixing, and motion graphics.",
+      "prerequisites": ["video_software"],
+      "resources": [
+        {"title": "DaVinci Resolve Training", "url": "https://www.blackmagicdesign.com/products/davinciresolve/training", "type": "course"},
+        {"title": "Premiere Pro Tutorials", "url": "https://helpx.adobe.com/premiere-pro/tutorials.html", "type": "tutorial"},
+        {"title": "Advanced Video Editing Mastery", "url": "https://www.youtube.com/watch?v=hdI2bqOjyQM", "type": "video"}
+      ],
+      "career_tags": ["content", "marketing"]
+    },
+    "content_writing": {
+      "id": "content_writing",
+      "title": "Content Writing",
+      "category": "creative",
+      "description": "Creating compelling written content. Covers copywriting, blog writing, SEO writing, storytelling, tone of voice, editing, and content strategy.",
+      "prerequisites": ["communication"],
+      "resources": [
+        {"title": "Copyblogger", "url": "https://copyblogger.com", "type": "reference"},
+        {"title": "On Writing Well — Zinsser", "url": "https://www.harpercollins.com/products/on-writing-well-william-zinsser", "type": "book"}
+      ],
+      "career_tags": ["marketing", "content"]
+    },
+    "animation": {
+      "id": "animation",
+      "title": "Animation",
+      "category": "creative",
+      "description": "Creating motion graphics and animated content. Covers principles of animation, 2D/3D animation, After Effects, motion design, and storytelling through motion.",
+      "prerequisites": ["graphic_design"],
+      "resources": [
+        {"title": "The Animator's Survival Kit — Williams", "url": "http://www.theanimatorssurvivalkit.com", "type": "book"},
+        {"title": "School of Motion", "url": "https://www.schoolofmotion.com", "type": "course"}
+      ],
+      "career_tags": ["design", "content"]
+    },
+    "photography": {
+      "id": "photography",
+      "title": "Photography",
+      "category": "creative",
+      "description": "Visual storytelling through photography. Covers exposure, composition, lighting, post-processing, gear, and genre-specific techniques.",
+      "prerequisites": [],
+      "resources": [
+        {"title": "Cambridge in Colour", "url": "https://www.cambridgeincolour.com/tutorials.htm", "type": "tutorial"},
+        {"title": "Photography Life", "url": "https://photographylife.com", "type": "reference"}
+      ],
+      "career_tags": ["content", "design"]
+    },
+    "active_listening": {
+      "id": "active_listening",
+      "title": "Active Listening",
+      "category": "soft_skills",
+      "description": "The foundation of interpersonal communication. Covers receiving, interpreting, and responding to messages effectively.",
+      "prerequisites": [],
+      "resources": [
+        {"title": "Listening Skills - MindTools", "url": "https://www.mindtools.com/page8.html", "type": "guide"}
+      ],
+      "career_tags": ["all"]
+    },
+    "email_etiquette": {
+      "id": "email_etiquette",
+      "title": "Professional Email Etiquette",
+      "category": "soft_skills",
+      "description": "Mastering clear and effective professional correspondence.",
+      "prerequisites": [],
+      "resources": [
+        {"title": "Professional Email Writing", "url": "https://www.youtube.com/watch?v=OXGznpKZ_sA", "type": "video"}
+      ],
+      "career_tags": ["all"]
+    },
+    "feedback_skills": {
+      "id": "feedback_skills",
+      "title": "Giving & Receiving Feedback",
+      "category": "soft_skills",
+      "description": "Techniques for constructive criticism and growth-minded feedback.",
+      "prerequisites": [],
+      "resources": [
+        {"title": "The Art of Feedback", "url": "https://www.youtube.com/watch?v=yfoY53QXEnI", "type": "video"}
+      ],
+      "career_tags": ["all"]
+    },
+    "communication": {
+      "id": "communication",
+      "title": "Professional Communication",
+      "category": "soft_skills",
+      "description": "Advanced communication techniques. Covers written communication, nonverbal cues, empathy, and conflict resolution.",
+      "prerequisites": ["active_listening", "email_etiquette", "feedback_skills"],
+      "resources": [
+        {"title": "How to Win Friends — Carnegie", "url": "https://www.simonandschuster.com/books/How-to-Win-Friends-and-Influence-People/Dale-Carnegie/9780671027032", "type": "book"},
+        {"title": "Crucial Conversations", "url": "https://cruciallearning.com/crucial-conversations-book/", "type": "book"},
+        {"title": "Mastering Communication", "url": "https://www.youtube.com/watch?v=rfscVS0vtbw", "type": "video"}
+      ],
+      "career_tags": ["all"]
+    },
+    "presentation_design": {
+      "id": "presentation_design",
+      "title": "Presentation Design",
+      "category": "soft_skills",
+      "description": "Crafting visually engaging and effective slides and materials.",
+      "prerequisites": [],
+      "resources": [
+        {"title": "Slide Design for Beginners", "url": "https://www.youtube.com/watch?v=pQN-pnXPaVg", "type": "video"}
+      ],
+      "career_tags": ["all"]
+    },
+    "body_language": {
+      "id": "body_language",
+      "title": "Body Language & Presence",
+      "category": "soft_skills",
+      "description": "Using non-verbal cues to command presence and build trust.",
+      "prerequisites": [],
+      "resources": [
+        {"title": "Mastering Body Language", "url": "https://www.youtube.com/watch?v=rfscVS0vtbw", "type": "video"}
+      ],
+      "career_tags": ["all"]
+    },
+    "public_speaking": {
+      "id": "public_speaking",
+      "title": "Public Speaking Mastery",
+      "category": "soft_skills",
+      "description": "Communicating effectively to audiences. Covers delivery, slide design, and storytelling.",
+      "prerequisites": ["communication", "presentation_design", "body_language"],
+      "resources": [
+        {"title": "TED Masterclass", "url": "https://masterclass.com/articles/ted-masterclass", "type": "course"},
+        {"title": "Toastmasters", "url": "https://www.toastmasters.org", "type": "community"},
+        {"title": "Public Speaking Secrets", "url": "https://www.youtube.com/watch?v=p1hI6jF4fI0", "type": "video"}
+      ],
+      "career_tags": ["all"]
+    },
+    "eq": {
+      "id": "eq",
+      "title": "Emotional Intelligence",
+      "category": "soft_skills",
+      "description": "Understanding and managing emotions for better professional relationships.",
+      "prerequisites": [],
+      "resources": [
+        {"title": "EQ Essentials", "url": "https://www.youtube.com/watch?v=Sg6YStTf_Yc", "type": "video"}
+      ],
+      "career_tags": ["all"]
+    },
+    "conflict_resolution": {
+      "id": "conflict_resolution",
+      "title": "Conflict Resolution",
+      "category": "soft_skills",
+      "description": "Navigating disagreements and resolving issues constructively.",
+      "prerequisites": [],
+      "resources": [
+        {"title": "Managing Conflict (Traversy)", "url": "https://www.youtube.com/watch?v=p1hI6jF4fI0", "type": "video"}
+      ],
+      "career_tags": ["all"]
+    },
+    "delegation": {
+      "id": "delegation",
+      "title": "Delegation & Authority",
+      "category": "soft_skills",
+      "description": "Effectively empowering team members and managing workloads.",
+      "prerequisites": [],
+      "resources": [
+        {"title": "How to Delegate", "url": "https://www.youtube.com/watch?v=kGX8irPrNwQ", "type": "video"}
+      ],
+      "career_tags": ["all"]
+    },
+    "leadership": {
+      "id": "leadership",
+      "title": "Leadership Mastery",
+      "category": "soft_skills",
+      "description": "Leading teams and organizations. Covers coaching, decision-making, and organizational culture.",
+      "prerequisites": ["communication", "eq", "conflict_resolution", "delegation"],
+      "resources": [
+        {"title": "Leaders Eat Last — Sinek", "url": "https://simonsinek.com/books/leaders-eat-last/", "type": "book"},
+        {"title": "The Manager's Path — Fournier", "url": "https://www.oreilly.com/library/view/the-managers-path/9781491973882/", "type": "book"},
+        {"title": "Leadership Philosophy", "url": "https://www.youtube.com/watch?v=rfscVS0vtbw", "type": "video"}
+      ],
+      "career_tags": ["all"]
+    },
+    "problem_solving": {
+      "id": "problem_solving",
+      "title": "Problem Solving",
+      "category": "soft_skills",
+      "description": "Structured approach to solving complex problems. Covers first-principles thinking, root cause analysis, frameworks (5 Whys, MECE), decision trees, and iteration.",
+      "prerequisites": [],
+      "resources": [
+        {"title": "Are Your Lights On? — Gause & Weinberg", "url": "https://www.amazon.com/Are-Your-Lights-Figure-Problem/dp/0932633161", "type": "book"},
+        {"title": "McKinsey Problem Solving", "url": "https://www.mckinsey.com/capabilities/strategy-and-corporate-finance/our-insights/the-mckinsey-guide-to-problem-solving", "type": "reference"}
+      ],
+      "career_tags": ["all"]
+    },
+    "critical_thinking": {
+      "id": "critical_thinking",
+      "title": "Critical Thinking",
+      "category": "soft_skills",
+      "description": "Analytical reasoning and evidence-based judgment. Covers logical fallacies, bias recognition, argument evaluation, Socratic method, and intellectual humility.",
+      "prerequisites": [],
+      "resources": [
+        {"title": "Thinking, Fast and Slow — Kahneman", "url": "https://us.macmillan.com/books/9780374533557/thinkingfastandslow", "type": "book"},
+        {"title": "The Critical Thinking Community", "url": "https://www.criticalthinking.org", "type": "reference"}
+      ],
+      "career_tags": ["all"]
+    },
+    "time_management": {
+      "id": "time_management",
+      "title": "Time Management",
+      "category": "soft_skills",
+      "description": "Effective management of time and priorities. Covers GTD methodology, Pomodoro, time blocking, priority matrices, energy management, and habit formation.",
+      "prerequisites": [],
+      "resources": [
+        {"title": "Getting Things Done — Allen", "url": "https://gettingthingsdone.com", "type": "book"},
+        {"title": "Deep Work — Newport", "url": "https://calnewport.com/books/deep-work/", "type": "book"}
+      ],
+      "career_tags": ["all"]
+    }
+  },
+  "career_paths": {
+    "web_dev": {"title": "Web Developer", "key_skills": ["html", "css", "javascript", "frontend", "backend"]},
+    "frontend": {"title": "Frontend Developer", "key_skills": ["html", "css", "javascript", "react", "frontend"]},
+    "backend": {"title": "Backend Developer", "key_skills": ["python", "sql", "backend", "api_dev", "system_design"]},
+    "full_stack": {"title": "Full Stack Developer", "key_skills": ["frontend", "backend", "full_stack", "sql"]},
+    "data_science": {"title": "Data Scientist", "key_skills": ["python", "statistics", "machine_learning", "data_science"]},
+    "ml_engineer": {"title": "ML Engineer", "key_skills": ["python", "machine_learning", "ai", "data_science"]},
+    "devops": {"title": "DevOps Engineer", "key_skills": ["linux", "docker", "kubernetes", "cloud", "devops"]},
+    "software_engineering": {"title": "Software Engineer", "key_skills": ["python", "dsa", "software_engineering", "system_design"]}
+  }
+}
